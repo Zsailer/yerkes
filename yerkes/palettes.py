@@ -1,17 +1,20 @@
 from .base import EmptyPalette
 
 
-# class Inferno_10(EmptyPalette):
-#
-#     colors = [
-#         '#000004',
-#         '#1B0C41',
-#         '#4C0C6B',
-#         '#781C6D',
-#         '#A52C60',
-#         '#CF4446',
-#         '#ED6925',
-#         '#FB9906',
-#         '#F7D13D',
-#         '#FCFFA4'
-#     ]
+class NewPalette(EmptyPalette):
+    """Create a new palette in Altair from a list of colors.
+
+    Parameters
+    ----------
+    colors : list
+        List of hex codes.
+
+    square_size : int
+        Width and height of palette squares.
+
+    orientations : string
+        How to orient the palette; "horizontal" or "vertical".
+    """
+    def __init__(self, colors=None, square_size=50, orientation="horizontal"):
+        super().__init__(square_size=square_size, orientation=orientation)
+        self.colors = colors

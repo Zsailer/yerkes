@@ -11,12 +11,54 @@
 * Free software: MIT license
 * Documentation: https://yerkes.readthedocs.io.
 
+
+Visualize color palettes interactively in Altair!.
+
+![](docs/img/yerkes.gif)
+
+## How to use.
+
+The simplest use case is to pass the palette a list of colors.
+
+1. Import `NewPalette` from Yerkes.
+2. Pass a list of color-hex codes to `NewPalette`.
+
 ```python
-from yerkes import palettes
+from yerkes import NewPalette
 
-yerkes.EmptyPalette(yerkes.palette_1)
+colors = [
+  '#FCFFA4',
+  '#F6D746',
+  '#FCA50A',
+  '#F3761B',
+]
+
+NewPalette(colors)
 ```
+![](docs/img/readme.png)
 
+Try exploring the palettes from [palettable](https://jiffyclub.github.io/palettable/).
+
+```python
+# Import palette
+from yerkes import NewPalette
+
+# Import a palette from palettable.
+from palettable.colorbrewer.diverging import RdGy_10 as palette
+
+# Show interactive palette
+NewPalette(palette.hex_colors)
+```
+![](docs/img/readme2.png)
+
+
+## Install
+
+Install from PyPI.
+
+```
+pip install yerkes
+```
 
 ## Credits
 

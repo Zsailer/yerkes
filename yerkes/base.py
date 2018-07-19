@@ -31,11 +31,19 @@ import altair as alt
 
 
 class EmptyPalette(object):
-    """Empty color palette in Altair.
+    """Base palette object for.
+
+    Parameters
+    ----------
+    square_size : int
+        Width and height of palette squares.
+
+    orientations : string
+        How to orient the palette; "horizontal" or "vertical".
     """
-    colors = []
 
     def __init__(self, square_size=50, orientation="horizontal"):
+        self.colors = []
         self.square_size = square_size
         self.orientation = orientation
 
@@ -81,7 +89,7 @@ class EmptyPalette(object):
         # Build a chart.
         tooltip = list(self.df.columns)
         chart = alt.Chart(self.df).mark_rect().encode(
-            color=alt.Color("hex", legend=None),
+            color=alt.Color("hex", legend=None, scale=alt.Scale(range=self.colors)),
             tooltip=tooltip,
             **encoding
         ).properties(
