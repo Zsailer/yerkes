@@ -37,7 +37,7 @@ NewPalette(colors)
 ```
 ![](docs/img/readme.png)
 
-Try exploring the palettes from [palettable](https://jiffyclub.github.io/palettable/).
+You can also try exploring palettes from [palettable](https://jiffyclub.github.io/palettable/).
 
 ```python
 # Import palette
