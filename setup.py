@@ -11,7 +11,8 @@ with open('README.md') as readme_file:
 with open('HISTORY.rst') as history_file:
     history = history_file.read()
 
-requirements = ['Click>=6.0', ]
+requirements = ['Click>=6.0',
+                'altair>=0.2.1']
 
 setup_requirements = ['pytest-runner', ]
 
